@@ -1,5 +1,7 @@
 import warnings
+
 import pandas as pd
+
 from smartdada2.reader import reader
 
 
@@ -114,9 +116,7 @@ def get_trim_length_avgEE(avgEE_list, left, right):
     return [left, right, read_len, current_sumEE / read_len]
 
 
-def read_size_by_avg_EE(
-    FastqEntries, left: int, right: int, max_trim_perc=0.20
-):
+def read_size_by_avg_EE(FastqEntries, left: int, right: int, max_trim_perc=0.20):
     """Creates a dataframe containing average expected error per position
     for each length of read calculated within certain ranges of positions
     (e.g., not taking out more than 20% off of either end)

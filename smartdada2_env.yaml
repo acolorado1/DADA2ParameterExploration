@@ -11,6 +11,7 @@ dependencies:
   - pip:
     - pycodestyle
     - myst-parser
+    - pre-commit
     - sphinx-rtd-theme
     - sphinx-autobuild
 

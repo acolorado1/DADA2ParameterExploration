@@ -1,8 +1,10 @@
 import argparse as arg
 import warnings
-from smartdada2.reader import reader
-import GetTrimParameters as GTP
+
 import GetMaxEE as GME
+import GetTrimParameters as GTP
+
+from smartdada2.reader import reader
 
 
 def main():

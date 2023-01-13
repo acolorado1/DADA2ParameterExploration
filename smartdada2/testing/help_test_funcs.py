@@ -5,9 +5,7 @@ Module that contains helper functions for testing
 """
 
 import random
-from typing import List
-from typing import Union
-from typing import Optional
+from typing import List, Optional, Union
 
 # constants
 DNA = list("ATCGU")
@@ -65,7 +63,7 @@ def toy_sequencer(
 
             # select nucleotide
             sel_nuc = random.choice(DNA)
-            high_scores = ASCII_SCORES[len(NUMERICAL_SCORES) // 2:]  # noqa
+            high_scores = ASCII_SCORES[len(NUMERICAL_SCORES) // 2 :]  # noqa
             sel_score = random.choice(high_scores)
 
             # 10% chance for ambiguous seq (inherent Q low scores)

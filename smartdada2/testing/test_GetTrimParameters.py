@@ -1,5 +1,6 @@
 import unittest
 import warnings
+
 import smartdada2.GetTrimParameters as GTP
 from smartdada2.reader import reader
 
@@ -24,9 +25,7 @@ class MyTestCase(unittest.TestCase):
 
         # check raised errors
         string_list = ["30", "35", "36"]
-        self.assertRaises(TypeError,
-                          GTP.trim_ends_less_than_threshold,
-                          string_list)
+        self.assertRaises(TypeError, GTP.trim_ends_less_than_threshold, string_list)
 
         impossible_values = [20.0, 50.0, 2.0]
         self.assertRaises(
@@ -90,9 +89,7 @@ class MyTestCase(unittest.TestCase):
     def test_get_trim_length_avgEE(self):
         # raise errors
         wrong_type = ["1", 2, 3]
-        self.assertRaises(TypeError,
-                          GTP.get_trim_length_avgEE,
-                          wrong_type, 1, 2)
+        self.assertRaises(TypeError, GTP.get_trim_length_avgEE, wrong_type, 1, 2)
 
         # calculate average
         test_EE_list = [2.0, 3.0]

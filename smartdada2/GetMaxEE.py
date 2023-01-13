@@ -1,5 +1,6 @@
-import pandas as pd
 import numpy as np
+import pandas as pd
+
 import smartdada2.GetTrimParameters as GTP
 from smartdada2.reader import reader
 
@@ -53,8 +54,7 @@ def read_size_by_maxEE(FastqEntries, left: int, right: int):
 
     # create two column dataframe
     sumEE = pd.DataFrame(
-        list(zip(no_trimming, obv_trimming)),
-        columns=["NoTrimming", "ObviousTrimming"]
+        list(zip(no_trimming, obv_trimming)), columns=["NoTrimming", "ObviousTrimming"]
     )
 
     sumEE = sumEE.reset_index(drop=True)
